@@ -1,6 +1,5 @@
 //
 //  main.cpp
-//  Test1
 //
 //  Created by Simona Ivanova.
 //
