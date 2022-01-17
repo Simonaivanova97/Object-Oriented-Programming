@@ -18,4 +18,4 @@ Options: [A sea]; [A mountain]
 
 What type of alphabet do the Bulgarians use?
 Correct answer: Cyrillic
-Max point: 2 <br />
+Max point: 2
