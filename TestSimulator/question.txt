@@ -1,0 +1,21 @@
+The capital city of Bulgaria is Sofia. What was its old name?
+Correct answer: Serdica
+Max point: 1
+Number of possible answer: 4
+Options: [Sofafolis]; [Pliska]; [Cybelis]
+
+What's the name of the highest peak in Bulgaria?
+Correct answer: Musala
+Max point: 1
+Number of possible answer: 5
+Options: [Botev]; [Aida]; [Vihren]; [Rouen]
+
+What separates Bulgaria and Romania?
+Correct answer: A river
+Max point: 1
+Number of possible answer: 3
+Options: [A sea]; [A mountain]
+
+What type of alphabet do the Bulgarians use?
+Correct answer: Cyrillic
+Max point: 2
