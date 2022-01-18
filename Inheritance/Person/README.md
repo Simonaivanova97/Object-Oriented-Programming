@@ -7,13 +7,13 @@
 ```
                         ________   -foreName
                        | Person |  -lastName
-                        --------   -age
+                        ________   -age
                            /\    
                           /  \
                          /    \
                         /      \
                 _________     ________
   -sprecialty  | Student |   | Worker |  -salaryForHour
-  -grade        ---------     --------   -hours
+  -grade        _________     ________   -hours
 ```
 Класът Person е базов клас, а класовете Student и Worker са производни класове. 
