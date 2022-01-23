@@ -100,12 +100,18 @@ Test::Test(const Test& other){
 }
 Test& Test::operator=(const Test& other){
     if(this!=&other){
+        for(int i=0;i<numberOfQuestion;i++){
+            delete arr[i];
+        }
         delete []arr;
         copyTest(other);
     }
     return *this;
 }
 Test::~Test(){
+    for(int i=0;i<numberOfQuestion;i++){
+        delete arr[i];
+    }
     delete []arr;
 }
 int Test::startTest()const{
