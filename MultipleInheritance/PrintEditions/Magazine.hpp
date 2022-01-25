@@ -12,6 +12,7 @@ class Magazine : virtual public PrintEdition{
 public:
     Magazine();
     Magazine(const char*, int, double, Periodicity);
+    virtual ~Magazine();
     
     virtual void print() const override;
 
