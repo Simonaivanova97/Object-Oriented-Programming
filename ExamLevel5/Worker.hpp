@@ -8,6 +8,7 @@ class Worker : public Employee{
 public:
     Worker();
     Worker(const char*, int, int, int);
+    virtual ~Worker();
     
     virtual bool execute(const char*) override;
     virtual double successRate() const override;
