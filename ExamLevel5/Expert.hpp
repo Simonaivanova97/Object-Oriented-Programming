@@ -8,6 +8,7 @@ class Expert : public Employee{
 public:
     Expert();
     Expert(const char*, int, int);
+    virtual ~Expert();
     
     virtual void print() const override;
     virtual bool execute(const char*) override;
