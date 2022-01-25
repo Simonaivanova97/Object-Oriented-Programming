@@ -5,6 +5,7 @@ Magazine::Magazine() : PrintEdition(){
 Magazine::Magazine(const char* t, int y, double p, Periodicity per) : PrintEdition(t, y, p){
     period=per;
 }
+Magazine::~Magazine(){}
 void Magazine::print() const{
     PrintEdition::print();
     cout<<"The magazine has periodicity: "<<periodicities[static_cast<int>(period)]<<endl;
