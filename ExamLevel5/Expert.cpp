@@ -1,6 +1,7 @@
 #include "Expert.hpp"
 Expert::Expert() : Employee() {}
 Expert::Expert(const char* n, int nT, int sT) : Employee(n, nT, sT) {}
+Expert::~Expert(){}
 bool Expert::execute(const char* task){
     numberOfExecuteTasks++;
     successfullyCompletedTasks++;
