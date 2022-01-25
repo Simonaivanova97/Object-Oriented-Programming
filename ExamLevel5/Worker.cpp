@@ -7,6 +7,7 @@ Worker::Worker(const char* n, int nT, int sT, int valueForK) : Employee(n, nT, s
     k=valueForK;
     currentExecuteTasks=0;
 }
+Worker::~Worker(){}
 bool Worker::execute(const char* task){
     currentExecuteTasks++;
     numberOfExecuteTasks++;
