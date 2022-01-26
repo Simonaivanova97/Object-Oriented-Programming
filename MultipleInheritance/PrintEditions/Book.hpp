@@ -10,13 +10,13 @@ public:
     Book(const char*, int, double, const char*);
     Book(const Book&);
     Book& operator=(const Book&);
-    virtual ~Book();
+    ~Book();
     
-    virtual void print() const override;
-    virtual PrintEdition* clone() override;
+    void print() const;
 
 private:
     char* author;
     
     void copyBook(const Book&);
 };
+#endif /* Book_hpp */
