@@ -15,6 +15,7 @@ public:
     
     const char* getTitile() const;
     virtual void print() const;
+    virtual PrintEdition* clone() = 0;
 private:
     char* title;
     int year;
