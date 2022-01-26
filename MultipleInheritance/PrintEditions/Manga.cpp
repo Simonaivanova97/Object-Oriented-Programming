@@ -11,3 +11,6 @@ void Manga::print() const{
 bool Manga::weeklyManga() const{
     return getPeriod()==Periodicity::Weekly;
 }
+PrintEdition* Manga::clone(){
+    return new Manga(*this);
+}
