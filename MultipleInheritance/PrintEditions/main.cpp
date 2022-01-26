@@ -3,7 +3,6 @@
 #include "Book.hpp"
 #include "Magazine.hpp"
 #include "Manga.hpp"
-#include "Bookstore.hpp"
 using namespace std;
 
 int main() {
@@ -12,24 +11,21 @@ int main() {
     Magazine nationaGeographic("National Georgrafic Kids", 2002, 3.50, Periodicity::Monthly);
     Magazine eva("Eva", 1998, 5.67, Periodicity::Monthly);
     Manga strangerThings("Stranger Things", 2019, 22.90, "TaylorTom", Periodicity::Yearly);
+    
+    theLittlePrince.print();
+    cout<<"==============================\n\n";
+    
+    davidCopperfield.print();
+    cout<<"==============================\n\n";
 
-    /*theLittlePrince.print();
-    cout<<"\n--------------------\n";
-    
     nationaGeographic.print();
-    cout<<"\n--------------------\n";
-    
-    strangerThings.print();*/
-    
-    PrintEdition* arr[4]={&theLittlePrince, &davidCopperfield, &nationaGeographic, &eva};
-    
-    Bookstore b1(arr, 4, 4);
-    
-    b1.addPrintedition(&strangerThings);
-    
-    b1.print();
-    cout<<endl;
-    
-    b1["National Georgrafic Kids"]->print();
-    
-    cout<<"\nNumber of weekly manga: "<<b1.numberMangaWeekly()<<endl;
+    cout<<"==============================\n\n";
+
+    eva.print();
+    cout<<"==============================\n\n";
+
+    strangerThings.print();
+    cout<<"==============================\n\n";
+
+    return 0;
+}
