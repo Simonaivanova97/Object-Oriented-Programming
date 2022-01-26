@@ -58,8 +58,7 @@ void Dictionary::addCoupleWords(const CoupleWords& cW){
         arr[i]=copyArr[i];
     }
     arr[size-1]=cW;
-    copyArr=NULL;
-    delete copyArr;
+    delete []copyArr;
 }
 void Dictionary::deleteCoupleWords(const CoupleWords& cW){
     CoupleWords* copyArr=arr;
@@ -75,8 +74,7 @@ void Dictionary::deleteCoupleWords(const CoupleWords& cW){
     for(i;i<size;i++,j++){
         arr[i]=copyArr[j];
     }
-    copyArr=NULL;
-    delete copyArr;
+    delete []copyArr;
 }
 const char* Dictionary::operator[](const char* w){
     bool haveWord=false;
