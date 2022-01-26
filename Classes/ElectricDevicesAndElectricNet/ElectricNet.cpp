@@ -51,8 +51,7 @@ void ElectricNet::operator+=(const ElectricDevice& dev){
         }
         arr[numberOfDevice-1]=dev;
         currentPower+=dev.getElectricPower();
-        copyArr=NULL;
-        delete copyArr;
+        delete []copyArr;
     }
     else{
         cout<<"Cannot add device "<<dev.getnameOfDevice()<<", because maximum power is exceeded!"<<endl;
@@ -81,8 +80,7 @@ ElectricNet& ElectricNet::operator-=(const char* devName){
             arr[i]=copyArr[j];
             j++;
         }
-        copyArr=NULL;
-        delete copyArr;
+        delete []copyArr;
     }
     else{
         cout<<"Device - "<<devName<<" is not in electric net!"<<endl;
