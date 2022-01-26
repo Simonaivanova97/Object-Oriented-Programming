@@ -13,6 +13,7 @@ public:
     virtual ~Book();
     
     virtual void print() const override;
+    virtual PrintEdition* clone() override;
 
 private:
     char* author;
