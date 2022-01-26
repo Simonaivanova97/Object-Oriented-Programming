@@ -5,8 +5,14 @@ void Bookstore::copyBookstore(const Bookstore& other){
     arr=new PrintEdition*[capacity];
     assert(arr!=NULL);
     for(int i=0;i<numberOfElement;i++){
-        arr[i]=other.arr[i];
+        arr[i]=other.arr[i]->clone();
     }
+}
+void Bookstore::erase(){
+    for(int i=0;i<numberOfElement;i++){
+        delete arr[i];
+    }
+    delete []arr;
 }
 Bookstore::Bookstore(){
     numberOfElement=0;
@@ -19,7 +25,7 @@ Bookstore::Bookstore(PrintEdition** a, int n, int c){
     arr=new PrintEdition*[capacity];
     assert(arr!=NULL);
     for(int i=0;i<numberOfElement;i++){
-        arr[i]=a[i];
+        arr[i]=a[i]->clone();
     }
 }
 Bookstore::Bookstore(const Bookstore& other){
@@ -27,13 +33,13 @@ Bookstore::Bookstore(const Bookstore& other){
 }
 Bookstore& Bookstore::operator=(const Bookstore& other){
     if(this!=&other){
-        delete []arr;
+        erase();
         copyBookstore(other);
     }
     return *this;
 }
 Bookstore::~Bookstore(){
-    delete []arr;
+    erase();
 }
 void Bookstore::print() const{
     for(int i=0;i<numberOfElement;i++){
@@ -48,10 +54,14 @@ void Bookstore::addPrintedition(PrintEdition* pE){
         arr=new PrintEdition*[capacity];
         assert(arr!=NULL);
         for(int i=0;i<numberOfElement;i++){
-            arr[i]=copyArr[i];
+            arr[i]=copyArr[i]->clone();
         }
+        for(int i=0;i<numberOfElement;i++){
+            delete copyArr[i];
+        }
+        delete []copyArr;
     }
-    arr[numberOfElement]=pE;
+    arr[numberOfElement]=pE->clone();
     numberOfElement++;
 }
 const PrintEdition* Bookstore::operator[](const char* t){
