@@ -15,7 +15,8 @@ public:
     virtual ~Magazine();
     
     virtual void print() const override;
-
+    virtual PrintEdition* clone() override;
+    
 private:
     Periodicity period;
     const char* periodicities[3]={"Weekly", "Monthly", "Yearly"};
