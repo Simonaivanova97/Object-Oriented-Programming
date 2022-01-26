@@ -26,4 +26,5 @@ private:
     int capacity;
     
     void copyBookstore(const Bookstore&);
+    void erase();
 };
