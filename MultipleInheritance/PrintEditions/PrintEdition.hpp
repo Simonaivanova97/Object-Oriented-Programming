@@ -11,11 +11,11 @@ public:
     PrintEdition(const char*, int, double);
     PrintEdition(const PrintEdition&);
     PrintEdition& operator=(const PrintEdition&);
-    virtual ~PrintEdition();
+    ~PrintEdition();
     
     const char* getTitile() const;
-    virtual void print() const;
-    virtual PrintEdition* clone() = 0;
+    void print() const;
+
 private:
     char* title;
     int year;
