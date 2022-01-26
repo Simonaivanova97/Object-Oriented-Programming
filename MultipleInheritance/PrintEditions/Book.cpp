@@ -32,3 +32,6 @@ void Book::print() const{
     PrintEdition::print();
     cout<<"Author: "<<author<<endl;
 }
+PrintEdition* Book::clone(){
+    return new Book(*this);
+}
