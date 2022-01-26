@@ -16,3 +16,6 @@ void Magazine::printOwlyPeriodicity() const{
 const Periodicity Magazine::getPeriod() const{
     return period;
 }
+PrintEdition* Magazine::clone(){
+    return new Magazine(*this);
+}
