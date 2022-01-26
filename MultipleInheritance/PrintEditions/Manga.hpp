@@ -13,6 +13,7 @@ public:
     bool weeklyManga() const;
     
     virtual void print() const override;
+    virtual PrintEdition* clone() override;
 
 };
 #endif /* Manga_hpp */
