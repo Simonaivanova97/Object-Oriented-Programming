@@ -20,6 +20,12 @@ int Test::countQuestion(const char* fileName){
     myFile.close();
     return count;
 }
+void Test::erase(){
+    for(int i=0;i<numberOfQuestion;i++){
+        delete arr[i];
+    }
+    delete []arr;
+}
 Test::Test(){
     numberOfQuestion=0;
     arr=NULL;
@@ -90,8 +96,10 @@ Test::Test(const char* fileName){
             arr[countQuest]=o.clone();
         }
         countQuest++;
-        tempArr=NULL;
-        delete tempArr;
+        for(int i=0;i<tempPosibleAnswer;i++){
+            delete tempArr[i];    
+        }
+        delete tempArr[];
     }
     myFile.close();
 }
@@ -100,19 +108,13 @@ Test::Test(const Test& other){
 }
 Test& Test::operator=(const Test& other){
     if(this!=&other){
-        for(int i=0;i<numberOfQuestion;i++){
-            delete arr[i];
-        }
-        delete []arr;
+        erase();
         copyTest(other);
     }
     return *this;
 }
 Test::~Test(){
-    for(int i=0;i<numberOfQuestion;i++){
-        delete arr[i];
-    }
-    delete []arr;
+    erase();
 }
 int Test::startTest()const{
     int countPoint=0;
