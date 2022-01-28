@@ -25,6 +25,7 @@ private:
     
     void copyTest(const Test&);
     int countQuestion(const char*);
+    void erase();
 };
 
 #endif /* Test_hpp */
