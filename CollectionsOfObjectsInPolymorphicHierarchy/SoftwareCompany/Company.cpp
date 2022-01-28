@@ -19,10 +19,7 @@ void Company::resize(){
     Employee** copyArr=arr;
     arr=new Employee*[maxCapacity];
     for(int i=0;i<numberOfEmployees;i++){
-        arr[i]=copyArr[i]->clone();
-    }
-    for(int i=0;i<numberOfEmployees;i++){
-        delete copyArr[i];
+        arr[i]=copyArr[i];
     }
     delete []copyArr;
 }
@@ -80,14 +77,11 @@ void Company::removeEmployee(const char* name){
         assert(arr!=NULL);
         for(int i=0;i<numberOfEmployees;i++){
             if(strcmp(temp[i]->getName(), name)!=0){
-                arr[j]=temp[i]->clone();
+                arr[j]=temp[i];
                 j++;
             }
         }
         numberOfEmployees--;
-        for(int i=0;i<=numberOfEmployees;i++){
-            delete temp[i];
-        }
         delete []temp;
     }
 }
